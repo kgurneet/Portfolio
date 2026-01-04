@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gurneet Kaur | CodeJet Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+  <div class="logo">Gurneet<span class="tag">Air.</span></div>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#certs">Certifications</a></li>
+    <li><a href="#volunteer">Volunteer</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Welcome aboard <span>CodeJet</span></h1>
+      <p>Applied Computer Science student with a passion for clean code, creative UIs, and flying toward full-stack excellence ✈️</p>
+      <a href="#about" class="btn">Start Journey</a>
+    </div>
+    <img src="assets/images/plane.png" class="hero-plane" alt="Flying Plane" />
+    <img src="assets/images/cloud1.png" class="cloud cloud1" alt="Cloud" />
+    <img src="assets/images/cloud1.png" class="cloud cloud2" alt="Cloud" />
+  </header>
+
+  <section id="about" class="section">
+  <h2>About Me & Skills</h2>
+
+  <div class="about-container about-row">
+    <div class="about-image">
+      <img src="assets/images/me.jpeg" alt="Gurneet Kaur" class="profile-pic" />
+      <a href="assets/images/Gurneet Resume.pdf" target="_blank" class="btn resume-btn">📄 Download Resume</a>
+    </div>
+    <div class="about-text">
+      <p>
+        I’m Gurneet Kaur, a B.Sc. Honours Applied Computer Science student with a minor in Mathematics. I’m passionate about full-stack development, real-time data systems, and building user-friendly solutions. I’ve worked on flight dashboards, ETL analytics, and machine-learning experiments — and I love writing clean, modular code. 🚀
+      </p>
+      <ul class="skills">
+  <li>Python</li>
+  <li>Java</li>
+  <li>JavaScript</li>
+  <li>HTML5</li>
+  <li>CSS3</li>
+  <li>SQL</li>
+  <li>PostgreSQL</li>
+  <li>Git & GitHub</li>
+  <li>Linux</li>
+  <li>Docker</li>
+  <li>Power BI</li>
+  <li>Object-Oriented Programming</li>
+  <li>Algorithm Design</li>
+  <li>Cloud Computing</li>
+  <li>Debugging</li>
+  <li>REST APIs</li>
+</ul>
+    </div>
+  </div>
+</section>
+
+  <section class="section" id="projects">
+  <h2>Projects</h2>
+
+  <div class="project-card">
+    <h3>✈️ Flight-Status Dashboard</h3>
+    <p>
+      Built a live dashboard for tracking real-time flight statuses for Northern Manitoba communities, optimized for low-bandwidth environments. Developed a clean, modular frontend using vanilla JavaScript and JSON-based API fetching. Prioritized accessibility and layout clarity for public digital signage in small communities.
+    </p>
+    <p><strong>Tech:</strong> JavaScript, HTML/CSS, REST APIs</p>
+    <a href="https://github.com/your-username/flight-status-dashboard" target="_blank" class="btn">🔗 View on GitHub</a>
+  </div>
+
+  <div class="project-card">
+    <h3>📊 Northwind SLA Analytics System</h3>
+    <p>
+      Designed and implemented a full ETL and analytics pipeline to calculate SLA metrics like lead time, on-time performance, late delivery buckets, and SLA flagging. Used a star-schema model in PostgreSQL and exported data to Power BI for visualization. Built SQL validation tests and automated Docker-based setup.
+    </p>
+    <p><strong>Tech:</strong> SQL, Docker, PostgreSQL, Power BI</p>
+    <a href="https://github.com/your-username/northwind-sla-etl" target="_blank" class="btn">🔗 View on GitHub</a>
+  </div>
+</section>
+
+  <section class="section" id="experience">
+  <h2>Experience</h2>
+
+  <ul class="timeline">
+    <li>
+      <h3>🔬 Undergraduate Research Assistant – University of Winnipeg</h3>
+      <span>Sept 2025 – Present</span>
+      <p>
+        Created Python scripts to collect, clean, and analyze sensor data using Raspberry Pi 5 for real-time research projects. Designed reproducible tests, documented results, and contributed to academic papers under faculty supervision. Focused on data accuracy, hardware validation, and team collaboration.
+      </p>
+    </li>
+
+    <li>
+      <h3>Teaching Assistant (Data Structures & Algorithms) – University of Winnipeg</h3>
+      <span>Sept 2024 – Present</span>
+      <p>
+        Supported over 200 students in debugging Java programs and understanding algorithm behavior. Led help sessions, explained OOP and recursion, and provided detailed feedback on assignments. Also helped invigilate exams and maintain grading consistency across sections.
+      </p>
+    </li>
+
+    <li>
+      <h3>Customer Service Agent – Perimeter Aviation</h3>
+      <span>Oct 2024 – Present</span>
+      <p>
+        Delivered high-quality customer support in a fast-paced airport setting. Handled bookings, travel issues, and documentation with clarity and professionalism. Developed strong interpersonal and conflict-resolution skills while managing diverse passenger needs and team coordination.
+      </p>
+    </li>
+  </ul>
+</section>
+
+
+ <section class="section" id="education">
+  <h2>Education</h2>
+
+  <div class="education-grid">
+
+    <div class="edu-info">
+      <p><strong>B.Sc. Honours in Applied Computer Science</strong><br>
+      Minor: Mathematics<br>
+      The University of Winnipeg | Sep 2022 – Dec 2026</p>
+
+      <ul class="edu-highlights">
+        <li>Dean’s Honour List</li>
+        <li>4.0 CGPA</li>
+        <li>Academic Proficiency Scholarship</li>
+      </ul>
+    </div>
+
+   
+    <div class="edu-courses">
+      <h3>📘 Key Courses</h3>
+      <ul class="courses-list">
+        <li>Data Structures & Algorithms</li>
+        <li>Operating Systems</li>
+        <li>Artificial Intelligence</li>
+        <li>Data Warehousing</li>
+        <li>Computer Security & Privacy</li>
+        <li>Web Development</li>
+        <li>Object-Oriented Programming</li>
+        <li>Discrete Math</li>
+        <li>Linear Algebra</li>
+        <li>Calculus I & II</li>
+        <li>Advanced SQL & Databases</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+  <section class="section" id="certs">
+  <h2>Certifications</h2>
+
+  <div class="cert-grid">
+    <div class="cert-card">
+      <img src="assets/images/badge-google.png" alt="Google Cybersecurity" />
+      <h3>Google Cybersecurity Certificate</h3>
+      <p><strong>Completed July 2025</strong></p>
+      <p>
+        Covered core cybersecurity skills including network security, system hardening, incident detection, risk management, and threat analysis. Developed hands-on experience with Linux, Wireshark, and security frameworks like CIA Triad and NIST.
+      </p>
+    </div>
+
+    <div class="cert-card">
+      <img src="assets/images/badge-aws.png" alt="AWS" />
+      <h3>AWS Cloud Technical Essentials</h3>
+      <p><strong>Completed November 2025</strong></p>
+      <p>
+        Gained foundational knowledge of AWS services, architecture, and pricing models. Learned how to deploy basic applications on the cloud, understand storage & compute services, and manage resources using AWS Management Console.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+ <section class="section" id="volunteer">
+  <h2>Volunteer Work</h2>
+
+  <div class="volunteer-card">
+    <h3>Executive Secretary – ACM Student Chapter</h3>
+    <p><strong>Sep 2025 – Present</strong></p>
+    <p>
+      Coordinated academic and technical events, managed communications, and supported event planning for the ACM student community. Contributed to organizing workshops, code competitions, and collaborative meetups that promoted computer science engagement across the campus.
+    </p>
+  </div>
+
+  <div class="volunteer-card">
+    <h3>Langar Service Volunteer – Gurudwara Sahib Winnipeg</h3>
+    <p><strong>Jan 2024 – Present</strong></p>
+    <p>
+      Participated in meal preparation and distribution as part of the Sikh community's Langar program, serving free food to all visitors regardless of background. Gained experience in service, humility, teamwork, and cultural understanding while supporting a core humanitarian tradition.
+    </p>
+  </div>
+</section>
+
+
+  <section class="section contact" id="contact">
+    <h2> Contact Control Tower</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>2026 Gurneet Kaur | Portfolio ✈️</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
