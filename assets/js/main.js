@@ -36,3 +36,21 @@ const observer = new IntersectionObserver(entries => {
 animatedSections.forEach(section => {
   observer.observe(section);
 });
+
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const form = e.target;
+
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(form),
+  })
+  .then(() => {
+    form.style.display = "none";
+    document.getElementById("thankYouMessage").style.display = "block";
+  })
+  .catch(() => {
+    alert("❌ Message failed to send. Please try again.");
+  });
+});

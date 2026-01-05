@@ -522,3 +522,16 @@ footer {
 [data-animate="zoom-in"]              { transform: scale(0.8); opacity: 0; }
 [data-animate="fade-in"]              { transform: scale(0.95); opacity: 0; }
 [data-animate="fade-up"]              { transform: translateY(30px); opacity: 0; }
+#thankYouMessage {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 10px;
+  color: white;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

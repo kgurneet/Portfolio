@@ -209,17 +209,25 @@
 
   <section class="section contact" id="contact">
     <h2> Contact Control Tower</h2>
-    <form action="https://formsubmit.co/kgurneet0224@gmail.com" method="POST">
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="email" name="email" placeholder="Your Email" required>
-  <textarea name="message" placeholder="Your Message" required></textarea>
+    <div id="form-container">
+  <form id="contactForm" action="https://formsubmit.co/your.email@example.com" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message" required></textarea>
 
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_subject" value="New message from CodeJet Portfolio">
-  <input type="hidden" name="_template" value="table">
+    <!-- Hidden fields -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
 
-  <button type="submit">Send</button>
-</form>
+    <button type="submit">Send</button>
+  </form>
+
+  <!-- Thank you message -->
+  <div id="thankYouMessage" style="display: none;">
+    <h3>🎉 Thank you!</h3>
+    <p>Your message has been sent. I’ll get back to you soon.</p>
+  </div>
+</div>
 
   </section>
 
