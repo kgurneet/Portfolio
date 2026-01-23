@@ -544,7 +544,7 @@ footer {
 }
 
 .social-icons a{
-  width: 44px;              /* comfortable tap/click size */
+  width: 44px;            
   height: 44px;
   display: grid;
   place-items: center;
@@ -558,7 +558,7 @@ footer {
 }
 
 .social-icons img{
-  width: 22px;              /* regular icon size */
+  width: 22px;             
   height: 22px;
   object-fit: contain;
   display: block;
