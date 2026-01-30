@@ -560,18 +560,21 @@ footer {
 }
 
 .hero-title{
+  color: #333333;
   font-size: 44px;
   line-height: 1.15;
   margin-bottom: 16px;
 }
 
 .hero-name{
+  color: #333333;
   font-size: 20px;
   font-weight: 400;
   opacity: 0.9;
 }
 
 .hero-signature{
+  color: #333333;
   display: inline-block;
   font-size: 58px;
   font-weight: 700;
