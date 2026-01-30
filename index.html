@@ -10,7 +10,7 @@
 <body>
 
   <nav class="navbar" id="navbar">
-  <div class="logo">Gurneet<span class="tag">Air.</span></div>
+  <div class="logo">Gurneet<span class="tag">Kaur.</span></div>
   <div class="menu-icon" onclick="toggleMenu()">☰</div>
 
   <ul class="nav-links" id="navLinks">
@@ -26,8 +26,21 @@
 
   <header class="hero">
     <div class="hero-content">
-      <h1>Welcome aboard <br> <span>Gurneet Kaur</span></h1>
-      <p>Applied Computer Science student with a passion for clean code, creative UIs, and flying toward full-stack excellence.</p>
+      <h1 class="hero-title">
+  Welcome aboard!<br>
+  <span class="hero-name">My name is</span><br>
+  <span class="hero-signature">Gurneet Kaur</span>
+</h1>
+      <p>
+  I’m Gurneet Kaur, a B.Sc. Honours Applied Computer Science student (Minor: Mathematics) at The University of Winnipeg, expected to graduate in April 2027. I enjoy building clean, reliable software and turning ideas into user-friendly experiences.
+  <br><br>
+  Outside of tech, a few things that describe me:
+  <br>
+  • Aviation nerd ✈️ — fascinated by planes and all things flying.<br>
+  • Big fan of suspense & thriller films (I love spotting the twist before it drops).<br>
+  • Long walks to reset and think.
+</p>
+
       <a href="#about" class="btn">Start Journey</a>
     </div>
     <img src="assets/images/plane.png" class="hero-plane" alt="Flying Plane" />
@@ -47,24 +60,49 @@
       <p>
         I’m Gurneet Kaur, a B.Sc. Honours Applied Computer Science student with a minor in Mathematics. I’m passionate about full-stack development, real-time data systems, and building user-friendly solutions. I’ve worked on flight dashboards, ETL analytics, and machine-learning experiments — and I love writing clean, modular code. 🚀
       </p>
-      <ul class="skills">
-  <li>Python</li>
-  <li>Java</li>
-  <li>JavaScript</li>
-  <li>HTML5</li>
-  <li>CSS3</li>
-  <li>SQL</li>
-  <li>PostgreSQL</li>
-  <li>Git & GitHub</li>
-  <li>Linux</li>
-  <li>Docker</li>
-  <li>Power BI</li>
-  <li>Object-Oriented Programming</li>
-  <li>Algorithm Design</li>
-  <li>Cloud Computing</li>
-  <li>Debugging</li>
-  <li>REST APIs</li>
-</ul>
+      <div class="skills-groups">
+  <div class="skill-group">
+    <h3>Backend</h3>
+    <ul class="skills">
+      <li>Python</li>
+      <li>Java</li>
+      <li>REST APIs</li>
+      <li>Object-Oriented Programming</li>
+      <li>Algorithm Design</li>
+    </ul>
+  </div>
+
+  <div class="skill-group">
+    <h3>Frontend</h3>
+    <ul class="skills">
+      <li>JavaScript</li>
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>UI Debugging</li>
+    </ul>
+  </div>
+
+  <div class="skill-group">
+    <h3>Data</h3>
+    <ul class="skills">
+      <li>SQL</li>
+      <li>PostgreSQL</li>
+      <li>Power BI</li>
+      <li>ETL Concepts</li>
+    </ul>
+  </div>
+
+  <div class="skill-group">
+    <h3>Tools</h3>
+    <ul class="skills">
+      <li>Git & GitHub</li>
+      <li>Linux</li>
+      <li>Docker</li>
+      <li>Cloud Computing</li>
+    </ul>
+  </div>
+</div>
+
     </div>
   </div>
 </section>
@@ -75,18 +113,29 @@
   <div class="project-card">
     <h3>✈️ Flight-Status Dashboard</h3>
     <p>
-      Built a live dashboard for tracking real-time flight statuses for Northern Manitoba communities, optimized for low-bandwidth environments. Developed a clean, modular frontend using vanilla JavaScript and JSON-based API fetching. Prioritized accessibility and layout clarity for public digital signage in small communities.
-    </p>
-    <p><strong>Tech:</strong> JavaScript, HTML/CSS, REST APIs</p>
+    Built a live dashboard to track real-time flight statuses for Northern Manitoba routes and small airlines. A key challenge was that updates were often scattered across different airline pages and posts, which made it time-consuming for travelers to find the latest information.
+  </p>
+  <p>
+    I designed the dashboard to bring those updates together into one clean, easy-to-scan view, optimized for low-bandwidth environments and public displays. The UI focuses on clarity (status, time, delays/cancellations) so people can understand changes quickly without digging through multiple sources.
+  </p>
+  <p><strong>Impact:</strong> Made flight updates easier to access by centralizing scattered status information into a single place, reducing confusion and improving decision-making for travelers and community members—especially when schedules change.</p>
+  <p><strong>Tech:</strong> JavaScript, HTML/CSS, REST APIs</p>
     <a href="https://github.com/kgurneet/Flight-Status" target="_blank" class="btn">🔗 View on GitHub</a>
   </div>
 
   <div class="project-card">
     <h3>📊 Northwind SLA Analytics System</h3>
     <p>
-      Designed and implemented a full ETL and analytics pipeline to calculate SLA metrics like lead time, on-time performance, late delivery buckets, and SLA flagging. Used a star-schema model in PostgreSQL and exported data to Power BI for visualization. Built SQL validation tests and automated Docker-based setup.
-    </p>
-    <p><strong>Tech:</strong> SQL, Docker, PostgreSQL, Power BI</p>
+    Built an end-to-end ETL + analytics pipeline to measure SLA performance from raw order and shipping data. The main problem I wanted to solve was that “late delivery” isn’t always obvious in messy operational data — teams may know something feels off, but without consistent metrics it’s hard to prove where delays happen and why.
+  </p>
+  <p>
+    I designed a star-schema model in PostgreSQL and created transformations to calculate lead time, on-time vs late delivery flags, and late-delivery buckets. I also added SQL validation checks to catch data quality issues early, and containerized the setup with Docker so the environment could be reproduced quickly.
+  </p>
+  <p>
+    I then connected the cleaned metrics to Power BI to create visuals that make trends easy to spot (for example: which shipping methods, time periods, or customers correlate with more late deliveries).
+  </p>
+  <p><strong>Impact:</strong> Turned scattered operational data into clear, auditable SLA insights—making it easier to identify delay patterns, communicate performance, and prioritize what to improve first.</p>
+  <p><strong>Tech:</strong> SQL, Docker, PostgreSQL, Power BI</p>
     <a href="https://github.com/kgurneet/Northwind-Pricing-and-Fulfillment" target="_blank" class="btn">🔗 View on GitHub</a>
   </div>
 </section>
@@ -229,9 +278,6 @@
     <img src="assets/images/linkedin.png" alt="LinkedIn" />
   </a>
 
-  <a href="https://www.instagram.com/gurneettt/" target="_blank" rel="noopener" aria-label="Instagram">
-    <img src="assets/images/instagram.webp" alt="GitHub" />
-  </a>
 </div>
 
 
