@@ -247,14 +247,6 @@ footer {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-.skills li {
-  display: inline-block;
-  background: #005fa3;
-  padding: 8px 10px;
-  margin: 6px;
-  border-radius: 20px;
-  font-size: 14px;
-}
 
 .project-card .btn {
   display: inline-block;
