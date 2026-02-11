@@ -12,13 +12,7 @@ document.querySelectorAll("#navLinks a").forEach(function (link) {
   });
 });
 
-// Navbar scroll color change
-window.addEventListener("scroll", () => {
-  const navbar = document.getElementById("navbar");
-  navbar.classList.toggle("scrolled", window.scrollY > 50);
-});
-
-console.log("Responsive navbar with scroll + dropdown is live ✨");
+console.log("Responsive navbar with dropdown is live ✨");
 
 // Reveal on scroll
 const animatedSections = document.querySelectorAll('.section');
