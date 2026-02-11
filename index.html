@@ -9,11 +9,11 @@
 </head>
 <body>
 
-  <nav class="navbar" id="navbar" aria-label="Main navigation">
-  <a href="#" class="logo" aria-label="Gurneet Kaur home">Gurneet<span class="tag">Kaur.</span></a>
-  <button type="button" class="menu-icon" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu" id="menuButton">☰</button>
+  <nav class="navbar" id="navbar">
+  <div class="logo">Gurneet<span class="tag">Kaur.</span></div>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
 
-  <ul class="nav-links" id="navLinks" role="list">
+  <ul class="nav-links" id="navLinks">
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#experience">Experience</a></li>
@@ -40,9 +40,8 @@
     <img src="assets/images/cloud1.png" class="cloud cloud2" alt="Cloud" />
   </header>
 
-  <main id="main-content">
-  <section id="about" class="section" aria-labelledby="about-heading">
-  <h2 id="about-heading">About Me & Skills</h2>
+  <section id="about" class="section">
+  <h2>About Me & Skills</h2>
 
   <div class="about-container about-row">
     <div class="about-image">
@@ -107,8 +106,8 @@
   </div>
 </section>
 
-  <section class="section" id="projects" aria-labelledby="projects-heading">
-  <h2 id="projects-heading">Projects</h2>
+  <section class="section" id="projects">
+  <h2>Projects</h2>
 
   <div class="project-card">
     <h3>✈️ Flight-Status Dashboard</h3>
@@ -140,10 +139,10 @@
   </div>
 </section>
 
-  <section class="section" id="experience" aria-labelledby="experience-heading">
-  <h2 id="experience-heading">Experience</h2>
+  <section class="section" id="experience">
+  <h2>Experience</h2>
 
-  <ul class="timeline" role="list">
+  <ul class="timeline">
     <li class="timeline-item">
       <span class="timeline-date">Sept 2025 – Present</span>
       <div class="timeline-content">
@@ -189,8 +188,8 @@
 </section>
 
 
- <section class="section" id="education" aria-labelledby="education-heading">
-  <h2 id="education-heading">Education</h2>
+ <section class="section" id="education">
+  <h2>Education</h2>
 
   <div class="education-block">
     <div class="edu-info">
@@ -226,8 +225,8 @@
 
 
 
-  <section class="section" id="certs" aria-labelledby="certs-heading">
-  <h2 id="certs-heading">Certifications</h2>
+  <section class="section" id="certs">
+  <h2>Certifications</h2>
 
   <div class="cert-grid">
     <div class="cert-card">
@@ -251,8 +250,8 @@
 </section>
 
 
- <section class="section" id="volunteer" aria-labelledby="volunteer-heading">
-  <h2 id="volunteer-heading">Volunteer Work</h2>
+ <section class="section" id="volunteer">
+  <h2>Volunteer Work</h2>
   <div class="volunteer-card">
     <h3>Treasurer – ACM Student Chapter</h3>
     <p><strong>Jan 2026 – Present</strong></p>
@@ -277,23 +276,20 @@
 </section>
 
 
-  <section class="section contact" id="contact" aria-labelledby="contact-heading">
-    <h2 id="contact-heading">Contact Control Tower</h2>
+  <section class="section contact" id="contact">
+    <h2>Contact Control Tower</h2>
     <div id="form-container">
-  <form id="contactForm" action="https://formsubmit.co/kgurneet0224@gmail.com" method="POST" aria-label="Contact form">
-    <label for="contact-name" class="visually-hidden">Your Name</label>
-    <input type="text" id="contact-name" name="name" placeholder="Your Name" required autocomplete="name" />
-    <label for="contact-email" class="visually-hidden">Your Email</label>
-    <input type="email" id="contact-email" name="email" placeholder="Your Email" required autocomplete="email" />
-    <label for="contact-message" class="visually-hidden">Your Message</label>
-    <textarea id="contact-message" name="message" placeholder="Your Message" required></textarea>
+  <form id="contactForm" action="https://formsubmit.co/kgurneet0224@gmail.com" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message" required></textarea>
 
 <div class="social-icons">
-  <a href="https://github.com/kgurneet" target="_blank" rel="noopener" aria-label="GitHub">
+  <a href="https://github.com/kgurneet" target="_blank" rel="noopener">
     <img src="assets/images/GitHub.png" alt="GitHub" />
   </a>
 
-  <a href="https://www.linkedin.com/in/kgurneet/" target="_blank" rel="noopener" aria-label="LinkedIn">
+  <a href="https://www.linkedin.com/in/kgurneet/" target="_blank" rel="noopener">
     <img src="assets/images/linkedin.png" alt="LinkedIn" />
   </a>
 
@@ -304,20 +300,19 @@
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_template" value="table">
 
-    <button type="submit">Send message</button>
+    <button type="submit">Send</button>
   </form>
 
-  <!-- Thank you message (announced to screen readers when shown) -->
-  <div id="thankYouMessage" style="display: none;" role="status" aria-live="polite">
-    <h3>Thank you!</h3>
+  <!-- Thank you message -->
+  <div id="thankYouMessage" style="display: none;">
+    <h3>🎉 Thank you!</h3>
     <p>Your message has been sent. I’ll get back to you soon.</p>
   </div>
 </div>
 
   </section>
-  </main>
 
-  <footer role="contentinfo">
+  <footer>
     <p>2026 Gurneet Kaur | Portfolio ✈️</p>
   </footer>
 
