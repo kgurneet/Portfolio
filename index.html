@@ -5,15 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gurneet Kaur | Portfolio</title>
   <link rel="stylesheet" href="assets/css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <nav class="navbar" id="navbar">
-  <div class="logo">Gurneet<span class="tag">Kaur.</span></div>
-  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+  <nav class="navbar" id="navbar" aria-label="Main navigation">
+  <a href="#" class="logo" aria-label="Gurneet Kaur home">Gurneet<span class="tag">Kaur.</span></a>
+  <button type="button" class="menu-icon" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu" id="menuButton">☰</button>
 
-  <ul class="nav-links" id="navLinks">
+  <ul class="nav-links" id="navLinks" role="list">
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#experience">Experience</a></li>
@@ -40,13 +41,14 @@
     <img src="assets/images/cloud1.png" class="cloud cloud2" alt="Cloud" />
   </header>
 
-  <section id="about" class="section">
-  <h2>About Me & Skills</h2>
+  <main id="main-content">
+  <section id="about" class="section" aria-labelledby="about-heading">
+  <h2 id="about-heading">About Me & Skills</h2>
 
   <div class="about-container about-row">
     <div class="about-image">
       <img src="assets/images/me.jpeg" alt="Gurneet Kaur" class="profile-pic" />
-      <a href="assets/images/Gurneet Kaur Resume.pdf" target="_blank" class="btn resume-btn">📄 Download Resume</a>
+      <a href="assets/images/Gurneet Kaur Resume.pdf" target="_blank" rel="noopener" class="btn resume-btn">Download Resume (PDF)</a>
     </div>
     <div class="about-text">
        <p>
@@ -64,6 +66,7 @@
     <ul class="skills-list">
       <li>Python</li>
       <li>Java</li>
+      <li>C++</li>
       <li>REST APIs</li>
       <li>Object-Oriented Programming</li>
       <li>Algorithm Design</li>
@@ -105,8 +108,8 @@
   </div>
 </section>
 
-  <section class="section" id="projects">
-  <h2>Projects</h2>
+  <section class="section" id="projects" aria-labelledby="projects-heading">
+  <h2 id="projects-heading">Projects</h2>
 
   <div class="project-card">
     <h3>✈️ Flight-Status Dashboard</h3>
@@ -118,7 +121,7 @@
   </p>
   <p><strong>Impact:</strong> Made flight updates easier to access by centralizing scattered status information into a single place, reducing confusion and improving decision-making for travelers and community members—especially when schedules change.</p>
   <p><strong>Tech:</strong> JavaScript, HTML/CSS, REST APIs</p>
-    <a href="https://github.com/kgurneet/Flight-Status" target="_blank" class="btn">🔗 View on GitHub</a>
+    <a href="https://github.com/kgurneet/Flight-Status" target="_blank" rel="noopener" class="btn">View on GitHub</a>
   </div>
 
   <div class="project-card">
@@ -134,46 +137,63 @@
   </p>
   <p><strong>Impact:</strong> Turned scattered operational data into clear, auditable SLA insights—making it easier to identify delay patterns, communicate performance, and prioritize what to improve first.</p>
   <p><strong>Tech:</strong> SQL, Docker, PostgreSQL, Power BI</p>
-    <a href="https://github.com/kgurneet/Northwind-Pricing-and-Fulfillment" target="_blank" class="btn">🔗 View on GitHub</a>
+    <a href="https://github.com/kgurneet/Northwind-Pricing-and-Fulfillment" target="_blank" rel="noopener" class="btn">View on GitHub</a>
   </div>
 </section>
 
-  <section class="section" id="experience">
-  <h2>Experience</h2>
+  <section class="section" id="experience" aria-labelledby="experience-heading">
+  <h2 id="experience-heading">Experience</h2>
 
-  <ul class="timeline">
-    <li>
-      <h3>🔬 Undergraduate Research Assistant – University of Winnipeg</h3>
-      <span>Sept 2025 – Present</span>
-      <p>
-        Created Python scripts to collect, clean, and analyze sensor data using Raspberry Pi 5 for real-time research projects. Designed reproducible tests, documented results, and contributed to academic papers under faculty supervision. Focused on data accuracy, hardware validation, and team collaboration.
-      </p>
+  <ul class="timeline" role="list">
+    <li class="timeline-item">
+      <span class="timeline-date">Sept 2025 – Present</span>
+      <div class="timeline-content">
+        <h3>Undergraduate Research Assistant – University of Winnipeg</h3>
+        <p>
+          Faculty research project required a reliable real-time data collection and processing system for experimental analysis with minimal manual intervention. Developed Python scripts to collect, clean, and analyze real-time sensor data using Raspberry Pi 5, implementing automated data processing pipelines and validation checks. Improved data signal reliability for experimental analysis, reduced manual data processing time, and enabled consistent data collection for ongoing research.
+        </p>
+        <p>
+          Complex technical implementation with multiple unknowns required a systematic approach to ensure accuracy and reproducibility. Applied strong problem-solving skills to break down complex technical tasks into smaller testable components, designed controlled tests, and evaluated multiple implementation approaches. Documented workflows, procedures, and test results with detailed explanations and rationale to support research continuity and team collaboration.
+        </p>
+        <p>
+          Contributed to a faculty-supervised research paper by supporting data handling, writing analytical sections, and applying critical-thinking skills while adhering to confidentiality restrictions. Successfully contributed to academic research output while developing technical writing skills.
+        </p>
+      </div>
     </li>
 
-    <li>
-      <h3>Teaching Assistant (Data Structures & Algorithms) – University of Winnipeg</h3>
-      <span>Sept 2024 – Present</span>
-      <p>
-        Supported over 200 students in debugging Java programs and understanding algorithm behavior. Led help sessions, explained OOP and recursion, and provided detailed feedback on assignments. Also helped invigilate exams and maintain grading consistency across sections.
-      </p>
+    <li class="timeline-item">
+      <span class="timeline-date">Sept 2024 – Present</span>
+      <div class="timeline-content">
+        <h3>Teaching Assistant (Data Structures & Algorithms) – University of Winnipeg</h3>
+        <p>
+          200+ students needed guidance debugging Java programs and understanding complex algorithmic concepts. Assisted students by guiding them through debugging Java programs, identifying logic errors, and understanding algorithmic behavior through step-by-step reasoning and systematic troubleshooting approaches. Taught modular program design, naming conventions, algorithm complexity analysis, and writing strong test cases to prevent common logic failures. Equipped students with core software development best practices applicable to professional development environments.
+        </p>
+        <p>
+          Supported grading, provided written feedback, invigilated exams, and responded to technical questions throughout the term. Successfully managed multiple assigned tasks while ensuring student comprehension and academic integrity, demonstrating organizational skills and reliability.
+        </p>
+      </div>
     </li>
 
-    <li>
-      <h3>Customer Service Agent – Perimeter Aviation</h3>
-      <span>Oct 2024 – Present</span>
-      <p>
-        Delivered high-quality customer support in a fast-paced airport setting. Handled bookings, travel issues, and documentation with clarity and professionalism. Developed strong interpersonal and conflict-resolution skills while managing diverse passenger needs and team coordination.
-      </p>
+    <li class="timeline-item">
+      <span class="timeline-date">Oct 2024 – Present</span>
+      <div class="timeline-content">
+        <h3>Customer Service Agent – Perimeter Aviation</h3>
+        <p>
+          Provide customer support in a high-volume environment, managing inquiries, travel assistance, and service issues with professionalism and clarity. Demonstrate strong communication, patience, conflict-resolution, and problem-solving skills while assisting diverse passenger groups.
+        </p>
+        <p>
+          Maintain accuracy in documentation, follow safety procedures, and collaborate with team members to ensure smooth day-to-day operations.
+        </p>
+      </div>
     </li>
   </ul>
 </section>
 
 
- <section class="section" id="education">
-  <h2>Education</h2>
+ <section class="section" id="education" aria-labelledby="education-heading">
+  <h2 id="education-heading">Education</h2>
 
-  <div class="education-grid">
-
+  <div class="education-block">
     <div class="edu-info">
       <p><strong>B.Sc. Honours in Applied Computer Science</strong><br>
       Minor: Mathematics<br>
@@ -186,9 +206,8 @@
       </ul>
     </div>
 
-   
     <div class="edu-courses">
-      <h3>📘 Key Courses</h3>
+      <h3>Key Courses</h3>
       <ul class="courses-list">
         <li>Data Structures & Algorithms</li>
         <li>Operating Systems</li>
@@ -208,8 +227,8 @@
 
 
 
-  <section class="section" id="certs">
-  <h2>Certifications</h2>
+  <section class="section" id="certs" aria-labelledby="certs-heading">
+  <h2 id="certs-heading">Certifications</h2>
 
   <div class="cert-grid">
     <div class="cert-card">
@@ -233,8 +252,8 @@
 </section>
 
 
- <section class="section" id="volunteer">
-  <h2>Volunteer Work</h2>
+ <section class="section" id="volunteer" aria-labelledby="volunteer-heading">
+  <h2 id="volunteer-heading">Volunteer Work</h2>
   <div class="volunteer-card">
     <h3>Treasurer – ACM Student Chapter</h3>
     <p><strong>Jan 2026 – Present</strong></p>
@@ -259,13 +278,16 @@
 </section>
 
 
-  <section class="section contact" id="contact">
-    <h2> Contact Control Tower</h2>
+  <section class="section contact" id="contact" aria-labelledby="contact-heading">
+    <h2 id="contact-heading">Contact Control Tower</h2>
     <div id="form-container">
-  <form id="contactForm" action="https://formsubmit.co/kgurneet0224@gmail.com" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
-    <textarea name="message" placeholder="Your Message" required></textarea>
+  <form id="contactForm" action="https://formsubmit.co/kgurneet0224@gmail.com" method="POST" aria-label="Contact form">
+    <label for="contact-name" class="visually-hidden">Your Name</label>
+    <input type="text" id="contact-name" name="name" placeholder="Your Name" required autocomplete="name" />
+    <label for="contact-email" class="visually-hidden">Your Email</label>
+    <input type="email" id="contact-email" name="email" placeholder="Your Email" required autocomplete="email" />
+    <label for="contact-message" class="visually-hidden">Your Message</label>
+    <textarea id="contact-message" name="message" placeholder="Your Message" required></textarea>
 
 <div class="social-icons">
   <a href="https://github.com/kgurneet" target="_blank" rel="noopener" aria-label="GitHub">
@@ -283,19 +305,20 @@
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_template" value="table">
 
-    <button type="submit">Send</button>
+    <button type="submit">Send message</button>
   </form>
 
-  <!-- Thank you message -->
-  <div id="thankYouMessage" style="display: none;">
-    <h3>🎉 Thank you!</h3>
+  <!-- Thank you message (announced to screen readers when shown) -->
+  <div id="thankYouMessage" style="display: none;" role="status" aria-live="polite">
+    <h3>Thank you!</h3>
     <p>Your message has been sent. I’ll get back to you soon.</p>
   </div>
 </div>
 
   </section>
+  </main>
 
-  <footer>
+  <footer role="contentinfo">
     <p>2026 Gurneet Kaur | Portfolio ✈️</p>
   </footer>
 

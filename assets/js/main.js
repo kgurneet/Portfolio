@@ -1,14 +1,35 @@
-// Menu toggle
+// Menu toggle (accessible: button with aria-expanded)
+var menuButton = document.getElementById("menuButton");
+var navLinks = document.getElementById("navLinks");
+
 function toggleMenu() {
-  document.getElementById("navLinks").classList.toggle("active");
+  var isOpen = navLinks.classList.toggle("active");
+  if (menuButton) {
+    menuButton.setAttribute("aria-expanded", isOpen);
+    menuButton.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+  }
 }
 
-// Close on link click (mobile)
-document.querySelectorAll('#navLinks a').forEach(link => {
+if (menuButton) {
+  menuButton.addEventListener("click", toggleMenu);
+}
+
+// Close on link click (mobile) and scroll to section
+document.querySelectorAll("#navLinks a").forEach(function (link) {
   link.addEventListener("click", function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
-    document.getElementById("navLinks").classList.remove("active");
+    var href = this.getAttribute("href");
+    if (href && href.startsWith("#") && href.length > 1) {
+      e.preventDefault();
+      var target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+      navLinks.classList.remove("active");
+      if (menuButton) {
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Open menu");
+      }
+    }
   });
 });
 
